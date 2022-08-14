@@ -1,1 +1,56 @@
-<p>progress works!</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Striped Progress bar {{ progress1 }}</h4>
+                <div class="progress m-t-20">
+                    <div class="progress-bar bg-primary progress-bar-striped active" 
+                         style="height:10px;"
+                         role="progressbar"
+                         [style.width] = "getProgress1">
+                        <span
+                            class="sr-only">85% Complete (success)
+                        </span>
+                    </div>
+                </div>
+                <div class="progress m-t-20">
+                    <div class="progress-bar bg-info progress-bar-striped active" 
+                         style="height:10px;"
+                         role="progressbar"
+                         [style.width] = "getProgress2">
+                        <span
+                            class="sr-only">85% Complete (success)
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="row">
+    <div class="col-6">
+     <div class="card">
+            <div class="card-body">
+                <app-incrementer [progress]="progress1"
+                    	         [bgClass]="'btn-primary'"
+                                 (emitProgress)="progress1 = $event">
+                </app-incrementer>
+                <!--(emitProgress)="syncValue1($event)"-->
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+               <div class="card-body">
+                   <app-incrementer [progress]="progress2"
+                                    [bgClass]="'btn-info'"
+                                    (emitProgress)="progress2 = $event">
+                   </app-incrementer>
+               </div>
+           </div>
+       </div>
+
+</div>

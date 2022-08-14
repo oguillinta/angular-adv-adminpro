@@ -7,6 +7,9 @@ import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { ComponentsModule } from '../components/components.module';
+import { NgChartsModule } from 'ng2-charts';
 
 
 
@@ -18,9 +21,12 @@ import { RouterModule } from '@angular/router';
     DashboardComponent
   ],
   imports: [
+    NgChartsModule,
+    FormsModule,
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    ComponentsModule
   ],
   exports: [
     ProgressComponent,
