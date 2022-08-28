@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IncrementerComponent } from './incrementer/incrementer.component';
 import { FormsModule } from '@angular/forms';
-import { DonutComponent } from './donut/donut.component';
 import { NgChartsModule } from 'ng2-charts';
+
+import { IncrementerComponent } from './incrementer/incrementer.component';
+import { DonutComponent } from './donut/donut.component';
+
 
 
 @NgModule({
@@ -14,7 +16,8 @@ import { NgChartsModule } from 'ng2-charts';
   imports: [
     CommonModule,
     FormsModule,
-    NgChartsModule
+    NgChartsModule,
+
   ],
   exports: [
     IncrementerComponent,

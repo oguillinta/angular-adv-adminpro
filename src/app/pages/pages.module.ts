@@ -10,6 +10,9 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ComponentsModule } from '../components/components.module';
 import { NgChartsModule } from 'ng2-charts';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { PromisesComponent } from './promises/promises.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 
 
@@ -18,7 +21,10 @@ import { NgChartsModule } from 'ng2-charts';
     ProgressComponent,
     GraficalComponent,
     PagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    AccountSettingsComponent,
+    PromisesComponent,
+    RxjsComponent
   ],
   imports: [
     NgChartsModule,
